@@ -1,2 +1,4 @@
 project:
     name: bootcamp-aberto-aovivo
+postgres:
+  port: 5434
