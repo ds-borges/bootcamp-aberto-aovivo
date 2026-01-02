@@ -6,8 +6,9 @@ authors = [
     {name = "ds-borges",email = "diego97sousa@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.13,<3.14"
 dependencies = [
+    "apache-airflow (>=3.1.5,<4.0.0)"
 ]
 
 
