@@ -5,12 +5,12 @@ from airflow.models import Variable
 import json
 from datetime import datetime
 
-AIRBYTE_CONNETCION_ID = Variable.get("AIRBYTE_GOOGLE_POSTGRES_CONNECTION_ID")
+AIRBYTE_CONNETCION_ID = Variable.get("AIRBYTE_SAMPDATA_POSTGRES_CONNECTION_ID")
 API_KEY = f'Bearer {Variable.get("AIRBYTE_API_TOKEN")}'
 
 @dag(
-    dag_id="airbyte_dag_google_sheets_postgres",
-    description="minha etl braba",
+    dag_id="airbyte_dag_samp_data_postgres",
+    description="minha etl braba2",
     schedule="@daily", #Cada 5 Min
     catchup=False #backfill
 )
