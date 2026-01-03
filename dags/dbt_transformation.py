@@ -6,7 +6,7 @@ from datetime import datetime
 DBT_CLOUD_CONN_ID = "dbt-conn"
 JOB_ID = "70471823545829"
 @dag(
-    dag_id="dbt_dag",
+    dag_id="dbt_transformation",
     description="minha etl braba",
     schedule="@daily", #Cada 5 Min
     catchup=False #backfill

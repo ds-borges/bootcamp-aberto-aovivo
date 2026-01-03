@@ -1,3 +1,4 @@
+#Ocultada no .airflowignore
 from time import sleep
 from airflow.decorators import dag, task
 from datetime import datetime
