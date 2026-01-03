@@ -8,7 +8,12 @@ from datetime import datetime
 AIRBYTE_CONNETCION_ID = Variable.get("AIRBYTE_GOOGLE_POSTGRES_CONNECTION_ID")
 API_KEY = f'Bearer {Variable.get("AIRBYTE_API_TOKEN")}'
 
-@dag(start_date=datetime(2024, 4, 18), schedule_interval="@daily", catchup=False)
+@dag(
+    dag_id="airbyte_dag_google_sheets_postgres",
+    description="minha etl braba",
+    schedule="@daily", #Cada 5 Min
+    catchup=False #backfill
+)
 def running_airbyte():
 
     start_airbyte_sync = HttpOperator(
